@@ -1,1 +1,1 @@
-{"income":[{"type":"income","description":"ibirarane nahawe kwishure","amount":26000}],"expenses":[]}
+{"income":[{"type":"income","description":"ibirarane nahawe kwishure","amount":26000},{"type":"income","description":"salary","amount":15000}],"expenses":[{"type":"expense","description":"bought airtime","amount":5000},{"type":"expense","description":"buy a cake","amount":200},{"type":"expense","description":"buy a cake1","amount":200}]}

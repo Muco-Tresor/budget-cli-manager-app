@@ -2,14 +2,16 @@
 // built in modules
 const fs = require('fs');
 
+
 //thirdy party modules
+const typeOptions = {
+	demand: true,
+	describe: 'type of your budget option',
+	alias: 't'
+}
 const yargs = require('yargs')
 .command('add', 'add a budget manager', {
-	type: {
-		demand: true,
-		describe: 'type of your budget option',
-		alias: 't'
-	},
+	type: typeOptions,
 
 	description: {
 		describe: 'a description of your option',
@@ -23,6 +25,9 @@ const yargs = require('yargs')
 		alias: 'a'
 	}
 
+})
+.command('list', 'show all budget options', {
+	type: typeOptions,
 }).help('h').argv;
 
 
