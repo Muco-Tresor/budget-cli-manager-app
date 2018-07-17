@@ -8,7 +8,7 @@ Budget Manager Working Process
 * yargs
 
 #####functionalities
-* **add a budget option:**
+* **add a budget option: _working..._**
 	* _type: income and expenses_
 	* _description_
 	* _amount_
