@@ -1,4 +1,4 @@
-
+#!/home/mucort/.nvm/versions/node/v10.5.0/bin/node
 // built in modules
 const fs = require('fs');
 
@@ -17,7 +17,7 @@ const yargs = require('yargs')
 		alias: 'd'
 	},
 
-	amout: {
+	amount: {
 		describe: 'how much of your option',
 		demand: true,
 		alias: 'a'
@@ -31,12 +31,17 @@ const yargs = require('yargs')
 const budgetManager = require('./modules/budget_manager');
 const colors = require('./modules/colors');
 
+
 switch (yargs._[0]) {
 	/**
 	 * Add command
 	 */
 	case 'add':
-		budgetManager.add(yargs)
+		const addedOption = budgetManager.add(yargs);
+		if(addedOption) {
+			console.log(colors.theme('info', 'Option Added'));
+			budgetManager.log(addedOption, colors);
+		}
 		break;
 
 	default:
