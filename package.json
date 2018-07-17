@@ -1,0 +1,11 @@
+{
+  "name": "budget_manager",
+  "version": "1.0.0",
+  "description": "a budget-manager app",
+  "main": "index.js",
+  "author": "Muco Rolle Tresor",
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^12.0.1"
+  }
+}
