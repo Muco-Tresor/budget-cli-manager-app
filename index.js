@@ -49,30 +49,44 @@ switch (yargs._[0]) {
 		}
 		break;
 
-		case 'listIncome':
-			const income = budgetManager.getIncome();
-			if(income) {
-				console.log(
-					colors.getColor().bold.red(`Printing ${income.incomeNumber}`)
-				);
-				income.income.forEach( (income) => {
-					budgetManager.log(income, colors);
-				});
-			}
-		break;
+	/**
+	 * list income command
+	 */
+	case 'listIncome':
+		const income = budgetManager.getIncome();
+		if(income) {
+			console.log(
+				colors.getColor().bold.red(`Printing ${income.incomeNumber}`)
+			);
+			income.income.forEach( (income) => {
+				budgetManager.log(income, colors);
+			});
+		}
+	break;
 
-		case 'listExpenses':
-			const expenses = budgetManager.getExpenses();
-			if(expenses) {
-				console.log(
-					colors.getColor().bold.red(`Printing ${expenses.expensesNumber}`)
-				);
-				expenses.expenses.forEach( (expense) => {
-					budgetManager.log(expense, colors);
-				});
-			}
-			break;
-		default:
-			console.log(colors.theme('info', 'No command specified'));
-			break;
+	/**
+	 * listExpenses command
+	 */
+	case 'listExpenses':
+		const expenses = budgetManager.getExpenses();
+		if(expenses) {
+			console.log(
+				colors.getColor().bold.red(`Printing ${expenses.expensesNumber}`)
+			);
+			expenses.expenses.forEach( (expense) => {
+				budgetManager.log(expense, colors);
+			});
+		}
+	break;
+
+	/**
+	 * total income
+	 */
+	case 'totalIncome':
+		const getTotalIncome = budgetManager.totalIncome();
+		console.log(getTotalIncome);
+		break;
+	default:
+		console.log(colors.theme('info', 'No command specified'));
+		break;
 }

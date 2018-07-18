@@ -15,8 +15,8 @@ Budget Manager Working Process
 
 * show a budget option -> _under preparation..._
 * show all budget options -> _working..._
-* show all budget options based on type
+* show all budget options based on type _done_
 * delete an budget option
-* calculate total income
+* calculate total income _working_
 * calculate total expenses
 * show available total budget

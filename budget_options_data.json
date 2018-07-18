@@ -1,1 +1,1 @@
-{"income":[{"type":"income","description":"salary","amount":150000}],"expenses":[{"type":"expense","description":"buy shoes","amount":25000}]}
+{"income":[{"type":"income","description":"salary","amount":150000},{"type":"income","description":"sold a phome","amount":80000}],"expenses":[{"type":"expense","description":"buy shoes","amount":25000}]}

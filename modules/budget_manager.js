@@ -124,9 +124,20 @@ const getExpenses = () => {
 		expenses: options.expenses
 	}
 }
+
+const totalIncome = () => {
+	let total_income = 0;
+	const options = fetchBudgetOptions();
+	options.income.forEach( (income) => {
+		total_income = total_income + income.amount;
+	});
+	return total_income;
+}
+
 module.exports = {
 	add,
 	log,
 	getIncome,
 	getExpenses,
+	totalIncome,
 }
