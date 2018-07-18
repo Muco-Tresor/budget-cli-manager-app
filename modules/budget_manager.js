@@ -104,14 +104,29 @@ const getIncome = () => {
 
 	return {
 		incomeNumber: options.income.length > 1
-					  ? `( ${options.income.length} notes )`
-					  : `( ${options.income.length} note )`,
+					  ? `( ${options.income.length} options)`
+					  : `( ${options.income.length} option )`,
 		income: options.income
 	}
 }
 
+/**
+ * [show all expenses]
+ * @return {[array]} [show all expenses]
+ */
+const getExpenses = () => {
+	const options = fetchBudgetOptions();
+
+	return {
+		expensesNumber: options.expenses.length > 1
+					  ? `( ${options.expenses.length} options )`
+					  : `( ${options.expenses.length} option )`,
+		expenses: options.expenses
+	}
+}
 module.exports = {
 	add,
 	log,
 	getIncome,
+	getExpenses,
 }

@@ -49,7 +49,7 @@ switch (yargs._[0]) {
 		}
 		break;
 
-	case 'listIncome':
+		case 'listIncome':
 			const income = budgetManager.getIncome();
 			if(income) {
 				console.log(
@@ -59,8 +59,20 @@ switch (yargs._[0]) {
 					budgetManager.log(income, colors);
 				});
 			}
-			break;
-	default:
-		console.log(colors.theme('info', 'No command specified'));
 		break;
+
+		case 'listExpenses':
+			const expenses = budgetManager.getExpenses();
+			if(expenses) {
+				console.log(
+					colors.getColor().bold.red(`Printing ${expenses.expensesNumber}`)
+				);
+				expenses.expenses.forEach( (expense) => {
+					budgetManager.log(expense, colors);
+				});
+			}
+			break;
+		default:
+			console.log(colors.theme('info', 'No command specified'));
+			break;
 }
