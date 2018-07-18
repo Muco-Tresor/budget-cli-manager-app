@@ -49,6 +49,17 @@ switch (yargs._[0]) {
 		}
 		break;
 
+	case 'listIncome':
+			const income = budgetManager.getIncome();
+			if(income) {
+				console.log(
+					colors.getColor().bold.red(`Printing ${income.incomeNumber}`)
+				);
+				income.income.forEach( (income) => {
+					budgetManager.log(income, colors);
+				});
+			}
+			break;
 	default:
 		console.log(colors.theme('info', 'No command specified'));
 		break;
