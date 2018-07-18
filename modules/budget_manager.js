@@ -41,7 +41,7 @@ const saveBudgetOptions = (budget) => {
  * @return {[undefined]}        [nothing to return]
  */
 const log = (option, colors) => {
-	console.log(`${colors.theme('info', '--------------')}`);
+	console.log(`${colors.theme('info', '=========================')}`);
 	console.log(
 		`${colors.getColor().bold.blue('type: ')} ${colors.theme('info', option.type)}`
 	);
@@ -95,8 +95,23 @@ const add = ({type, description, amount}) => {
 
 }
 
+/**
+ * [show all income options]
+ * @return {[object]} [all income options and income number]
+ */
+const getIncome = () => {
+	const options = fetchBudgetOptions();
+
+	return {
+		incomeNumber: options.income.length > 1
+					  ? `( ${options.income.length} notes )`
+					  : `( ${options.income.length} note )`,
+		income: options.income
+	}
+}
 
 module.exports = {
 	add,
 	log,
+	getIncome,
 }
